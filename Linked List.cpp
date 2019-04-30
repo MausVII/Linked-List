@@ -32,6 +32,19 @@ int main()
 	}
 	file.close();
 
+	cout << "Unsorted Array:" << endl;
+
+	for (int i = 0; i < 15; ++i) {
+		cout << "///////////////" << endl;
+		cout << "Student Name: " << studentRecords[i].name << endl;
+		cout << "Student ID: " << studentRecords[i].ID << endl;
+		cout << "Student Email: " << studentRecords[i].email << endl;
+		cout << "Student GPA: " << studentRecords[i].GPA << endl;
+		cout << "///////////////" << endl << endl;
+	}
+
+	cout << "Sorted Linked List:" << endl;
+
 	records.Display();
 	while (true);
 	return 0;
