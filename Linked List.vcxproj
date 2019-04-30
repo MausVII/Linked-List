@@ -155,7 +155,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Linked List.cpp" />
-    <ClCompile Include="List.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
