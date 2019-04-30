@@ -1,29 +1,29 @@
-Robert     	714567    Jake@txstate.edu 3.2
+Jake     	714567    Jake@txstate.edu 3.2
 
-John     417689          jill@txstate.edu 3.1
+Jill    417689          jill@txstate.edu 3.1
 
-Alex      576294       Mitch@txstate.edu 2.1
+Mitch      576294       Mitch@txstate.edu 2.1
 
-Jake    754324      Robert@txstate.edu 3.5
+Robert    754324      Robert@txstate.edu 3.5
 
-Luke   875432     jack@txstate.edu 2.5
+Jack   875432     jack@txstate.edu 2.5
 
-Kyle   934751    John@txstate.edu 4.0
+John 934751    John@txstate.edu 4.0
 
-Matt    376871    cam@txstate.edu 3.6
+Cam    376871    cam@txstate.edu 3.6
 
-Cam    513769   Luke@txstate.edu 2.7
+Luke    513769   Luke@txstate.edu 2.7
 
-Mitch    545137    Alex@txstate.edu 3.5
+Alex	545137    Alex@txstate.edu 3.5
 
-Dave    822442   kyle@txstate.edu 3.2
+Kyle	822442   kyle@txstate.edu 3.2
 
-Ashley  723397    matt@txstate.edu 2.9
+Matt  723397    matt@txstate.edu 2.9
 
-Cindy   775126    pam@txstate.edu 3.3
+Pam   775126    pam@txstate.edu 3.3
 
-Pam   829926    Dave@txstate.edu 4.0
+Dave   829926    Dave@txstate.edu 4.0
 
-Jill    155181    Cindy@txstate.edu 4.0
+Cindy   155181    Cindy@txstate.edu 4.0
 
-Jack    497361   Ashley@txstate.edu 4.0
+Ashley    497361   Ashley@txstate.edu 4.0
