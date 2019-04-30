@@ -1,33 +1,23 @@
-#pragma once
+
 #include <string>
 #include <iostream>
+using namespace std;
 
 class List {
 private:
-	class Node {
-	private:
+	struct stuInfo {
 		int ID;
-		std::string name;
-		std::string email;
-		float GPA;
-	public:
-		Node(int ID, std::string name, std::string email, float GPA)
-			:
-			ID(ID),
-			name(name),
-			email(email),
-			GPA(GPA)
-		{}
-		Node* pNext = nullptr;
-		std::string GetName() const;
+		string name;
+		string email;
+		double GPA;
+
+		stuInfo* pNext = nullptr;
 		void Print();
 	};
-	Node* pTop = nullptr;
+	stuInfo* pTop = nullptr;
 public:
-	void Append(Node node);
-	void Insert(Node node);
-	void Delete(std::string name);
-	void Print();
-	void Print(std::string name);
-	bool isEmpty();
+	void Append(stuInfo  node);
+	void Insert(int ID, string name, string email, double GPA);
+	void Delete(int ID);
+	void Display();
 };

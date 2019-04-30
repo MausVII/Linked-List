@@ -1,12 +1,12 @@
 #include "List.h"
 
-void List::Append(Node node)
+void List::Append(stuInfo node)
 {
-	Node* pNewNode;
-	Node* pNodes;
+	stuInfo* pNewNode;
+	stuInfo* pNodes;
 
-	pNewNode = new Node(node);
-	if (List::isEmpty()) {
+	pNewNode = new stuInfo(node);
+	if (pTop == nullptr) {
 		pTop = pNewNode;
 		pNewNode = nullptr;
 	 }
@@ -19,47 +19,52 @@ void List::Append(Node node)
 	}
 }
 
-void List::Insert(Node node)
+void List::Insert(int ID, string name, string email, double GPA)
 {
-	Node* pNewNode = nullptr;
-	Node* pNodes = nullptr;
-	Node* pPrevious = nullptr;
+	stuInfo* NewNodeptr = nullptr;
+	stuInfo* pNodes = nullptr;
+	stuInfo* pPrevious = nullptr;
 
-	pNewNode = new Node(node);
+	NewNodeptr = new stuInfo;
+	NewNodeptr->ID = ID;
+	NewNodeptr->name = name;
+	NewNodeptr->email = email;
+	NewNodeptr->GPA = GPA;
 
-	if (isEmpty()) {
-		pTop = pNewNode;
-		pNewNode->pNext = nullptr;
+
+	if (pTop == nullptr) {
+		pTop = NewNodeptr;
+		NewNodeptr->pNext = nullptr;
 	}
 	else {
 		pNodes = pTop;
 
 		// Will iterate up pNodes until it finds a number greater in alphabetical order
 		// Saves position where it found it, and takes that new position
-		while (pNodes != nullptr && (pNodes->GetName().compare(pNewNode->GetName())) <= 0) {
+		while (pNodes != nullptr && (pNodes->ID <= NewNodeptr->ID)) {
 			pPrevious = pNodes;
 			pNodes = pNodes->pNext;
 		}
 
 		// Case there were no nodes
 		if (pPrevious == nullptr) {
-			pTop = pNewNode;
+			pTop = NewNodeptr;
 			pTop->pNext = pNodes;
 		}
 		// Makes previous point to new node and the new node to whatever previous was pointing before
 		else {
-			pPrevious->pNext = pNewNode;
-			pNewNode->pNext = pNodes;
+			pPrevious->pNext = NewNodeptr;
+			NewNodeptr->pNext = pNodes;
 		}
 	}
 }
 
-void List::Delete(std::string name)
+void List::Delete(int ID)
 {
-	Node* pNodes = pTop;
-	Node* pPrevious = nullptr;
+	stuInfo* pNodes = pTop;
+	stuInfo* pPrevious = nullptr;
 
-	while (pNodes != nullptr && pNodes->GetName() != name) {
+	while (pNodes != nullptr && pNodes->ID != ID) {
 		pPrevious = pNodes;
 		pNodes = pNodes->pNext;
 	}
@@ -68,9 +73,9 @@ void List::Delete(std::string name)
 	pNodes = nullptr;
 }
 
-void List::Print()
+void List::Display()
 {
-	Node* pNodes;
+	stuInfo* pNodes;
 	pNodes = pTop;
 	while (pNodes != nullptr) {
 		pNodes->Print();
@@ -78,43 +83,13 @@ void List::Print()
 	}
 }
 
-void List::Print(std::string name)
+void List::stuInfo::Print()
 {
-	Node* pNewNode = nullptr;
-	Node* pNodes = nullptr;
-
-	if (List::isEmpty()) {
-		std::cout << "List is empty.\n";
-	}
-	else {
-		pNodes = pTop;
-		Node* pPrevious = nullptr;
-
-		// Will iterate up pNodes until it finds a number greater in alphabetical order
-		// Saves position where it found it, and takes that new position
-		while (pNodes != nullptr && (pNodes->GetName().compare(pNewNode->GetName())) == 0) {
-			pPrevious = pNodes;
-			pNodes = pNodes->pNext;
-		}
-		pNodes->Print();
-	}
-}
-
-bool List::isEmpty()
-{
-	return pTop == nullptr;
-}
-
-std::string List::Node::GetName() const
-{
-	return name;
-}
-
-void List::Node::Print()
-{
-	std::cout << "Name: " << name
-		<< "\nID: " << ID
-		<< "\nEmail: " << email
-		<< "\nGPA: " << GPA
-		<< "\n\n";
+	cout << "///////////////" << endl;
+	cout << "Student name: " << name << endl
+		<< "Student ID: " << ID << endl
+		<< "Student Email: " << email << endl
+		<< "Student GPA: " << GPA << endl
+		<< endl;
+	cout << "///////////////" << endl << endl;
 }
